@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { //Redigering lavet på Stationær
         Scanner sc = new Scanner(System.in);
         String[] options = {"Wife", "Coffee", "Netflix", "Sofa", "Running Shoes", "Guitar", "Candy", "Dog", "Book", "Beer"};
         System.out.println("Which items would you want the most with you on a desert island" +
