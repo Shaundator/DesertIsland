@@ -3,28 +3,29 @@ package Projekt;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class DesertIsland {
 
-    public static void main(String[] args) { //Redigering lavet på Stationær
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String[] options = {"Wife", "Coffee", "Netflix", "Sofa", "Running Shoes", "Guitar", "Candy", "Dog", "Book", "Beer"};
-        System.out.println("Which items would you want the most with you on a desert island" +
-                "\n1. Wife" +
-                "\n2. Coffee" +
-                "\n3. Netflix" +
-                "\n4. Sofa" +
-                "\n5. Running Shoes" +
-                "\n6. Guitar" +
-                "\n7. Candy" +
-                "\n8. Dog" +
-                "\n9. Book" +
-                "\n10. Beer" +
-                "\nInsert your choices: ");
-        int[] userOptions = new int[10];
+        System.out.println("""
+                Which items would you want the most with you on a desert island
+                1. Wife
+                2. Coffee
+                3. Netflix
+                4. Sofa
+                5. Running Shoes
+                6. Guitar
+                7. Candy
+                8. Dog
+                9. Book
+                10. Beer
+                Insert your choices:\s""");
+        int[] userOptions = new int[options.length];
         int i;
         int a;
 
-        for (i = 0; i < 10; i++) {
+        for (i = 0; i < options.length; i++) {
             a = sc.nextInt();
             userOptions[a - 1] = userOptions[a - 1] + 1;
             System.out.println(options[a - 1]);
@@ -35,7 +36,7 @@ public class Main {
         int tempMax = userOptions[1];
         int mostPopular = 0;
 
-        for (i = 0; i < 10; i++) {
+        for (i = 0; i < options.length; i++) {
             if (userOptions[i] > tempMax) {
                 mostPopular = i;
                 tempMax = userOptions[i];
